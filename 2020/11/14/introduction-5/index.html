@@ -5,17 +5,17 @@
   
 
   
-  <title>Hexo導入から公開記事作成まで | Hexo</title>
+  <title>GitHubPagesへデプロイする | Hexo</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="docker-compose.yml 作成12345678910version: &#39;3&#39;services:  blog:    build: .&#x2F;generator&#x2F;    container_name: hexo    volumes:       - .&#x2F;generator&#x2F;app:&#x2F;usr&#x2F;src&#x2F;app">
+  <meta name="description" content="Git設定12git config --global user.name &quot;アカウント名&quot;git config --global user.email &quot;メールアドレス&quot;">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Hexo導入から公開記事作成まで">
-<meta property="og:url" content="https://greenwakame.github.io/hexo/2020/11/13/introduction-2/index.html">
+<meta property="og:title" content="GitHubPagesへデプロイする">
+<meta property="og:url" content="https://greenwakame.github.io/hexo/2020/11/14/introduction-5/index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="docker-compose.yml 作成12345678910version: &#39;3&#39;services:  blog:    build: .&#x2F;generator&#x2F;    container_name: hexo    volumes:       - .&#x2F;generator&#x2F;app:&#x2F;usr&#x2F;src&#x2F;app">
+<meta property="og:description" content="Git設定12git config --global user.name &quot;アカウント名&quot;git config --global user.email &quot;メールアドレス&quot;">
 <meta property="og:locale" content="en_US">
-<meta property="article:published_time" content="2020-11-13T13:53:07.000Z">
-<meta property="article:modified_time" content="2020-11-13T13:56:40.000Z">
+<meta property="article:published_time" content="2020-11-14T04:04:59.000Z">
+<meta property="article:modified_time" content="2020-11-14T04:04:59.000Z">
 <meta property="article:author" content="John Doe">
 <meta property="article:tag" content="hexo">
 <meta name="twitter:card" content="summary">
@@ -67,10 +67,10 @@
   </div>
 </header>
       <div class="outer">
-        <section id="main"><article id="post-introduction-2" class="article article-type-post" itemscope itemprop="blogPost">
+        <section id="main"><article id="post-introduction-5" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
-    <a href="/hexo/2020/11/13/introduction-2/" class="article-date">
-  <time datetime="2020-11-13T13:53:07.000Z" itemprop="datePublished">2020-11-13</time>
+    <a href="/hexo/2020/11/14/introduction-5/" class="article-date">
+  <time datetime="2020-11-14T04:04:59.000Z" itemprop="datePublished">2020-11-14</time>
 </a>
     
   </div>
@@ -81,7 +81,7 @@
         
   
     <h1 class="article-title" itemprop="name">
-      Hexo導入から公開記事作成まで
+      GitHubPagesへデプロイする
     </h1>
   
 
@@ -89,26 +89,23 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h3 id="docker-compose-yml-作成"><a href="#docker-compose-yml-作成" class="headerlink" title="docker-compose.yml 作成"></a>docker-compose.yml 作成</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">version: &#39;3&#39;</span><br><span class="line">services:</span><br><span class="line">  blog:</span><br><span class="line">    build: .&#x2F;generator&#x2F;</span><br><span class="line">    container_name: hexo</span><br><span class="line">    volumes: </span><br><span class="line">      - .&#x2F;generator&#x2F;app:&#x2F;usr&#x2F;src&#x2F;app</span><br><span class="line">    ports:</span><br><span class="line">      - 4000:4000</span><br><span class="line">    tty: true</span><br></pre></td></tr></table></figure>
+        <h3 id="Git設定"><a href="#Git設定" class="headerlink" title="Git設定"></a>Git設定</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git config --global user.name &quot;アカウント名&quot;</span><br><span class="line">git config --global user.email &quot;メールアドレス&quot;</span><br></pre></td></tr></table></figure>
 
 <a id="more"></a>
 
-<h3 id="docker-compose-build"><a href="#docker-compose-build" class="headerlink" title="docker-compose build"></a>docker-compose build</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker-compose build --no-cache</span><br></pre></td></tr></table></figure>
+<h3 id="config-yml設定-編集箇所のみ抜粋"><a href="#config-yml設定-編集箇所のみ抜粋" class="headerlink" title="_config.yml設定(編集箇所のみ抜粋)"></a>_config.yml設定(編集箇所のみ抜粋)</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">url: https:&#x2F;&#x2F;&#123;githubのusername&#125;.github.io&#x2F;&#123;リポジトリ名&#125;&#x2F;</span><br><span class="line">root: &#x2F;&#123;リポジトリ名&#125;</span><br><span class="line">type: git</span><br><span class="line">  repo: &#123;クローンURL&#125;</span><br><span class="line">  branch: &#123;設定するブランチ名&#125;</span><br></pre></td></tr></table></figure>
 
-<h3 id="blog-コンテナへアクセス"><a href="#blog-コンテナへアクセス" class="headerlink" title="blog コンテナへアクセス"></a>blog コンテナへアクセス</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker-compose exec blog &#x2F;bin&#x2F;sh</span><br></pre></td></tr></table></figure>
+<h3 id="デプロイ実施"><a href="#デプロイ実施" class="headerlink" title="デプロイ実施"></a>デプロイ実施</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo deploy</span><br></pre></td></tr></table></figure>
 
-<h3 id="sample-プロジェクト作成＆移動"><a href="#sample-プロジェクト作成＆移動" class="headerlink" title="sample プロジェクト作成＆移動"></a>sample プロジェクト作成＆移動</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo init sample &amp;&amp; cd sample</span><br></pre></td></tr></table></figure>
-
-<h3 id="下書き記事を作成"><a href="#下書き記事を作成" class="headerlink" title="下書き記事を作成"></a>下書き記事を作成</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo new draft introduction</span><br></pre></td></tr></table></figure>
-
-<h3 id="下書き記事表示オプションでサーバ起動"><a href="#下書き記事表示オプションでサーバ起動" class="headerlink" title="下書き記事表示オプションでサーバ起動"></a>下書き記事表示オプションでサーバ起動</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo server --draft</span><br></pre></td></tr></table></figure>
-
-<h3 id="下書き記事を公開フォルダへ移動"><a href="#下書き記事を公開フォルダへ移動" class="headerlink" title="下書き記事を公開フォルダへ移動"></a>下書き記事を公開フォルダへ移動</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo publish introduction</span><br></pre></td></tr></table></figure>
+<h3 id="トラブルシューティング"><a href="#トラブルシューティング" class="headerlink" title="トラブルシューティング"></a>トラブルシューティング</h3><p>下記のようなエラーメッセージが表示される場合は</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&#x2F;usr&#x2F;src&#x2F;app&#x2F;sample # hexo deploy</span><br><span class="line">INFO  Validating config</span><br><span class="line">ERROR Deployer not found: git</span><br></pre></td></tr></table></figure>
+<p>下記のコマンドを実施してみてください</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install hexo-deployer-git --save</span><br></pre></td></tr></table></figure>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://greenwakame.github.io/hexo/2020/11/13/introduction-2/" data-id="ckhh6e67q0001fok11kjbeeq7" class="article-share-link">Share</a>
+      <a data-url="https://greenwakame.github.io/hexo/2020/11/14/introduction-5/" data-id="ckhh6e686000cfok1brnj93ob" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/hexo/tags/hexo/" rel="tag">hexo</a></li></ul>
@@ -119,15 +116,20 @@
     
 <nav id="article-nav">
   
-    <a href="/hexo/2020/11/13/introduction-3/" id="article-nav-newer" class="article-nav-link-wrap">
+    <a href="/hexo/2020/11/14/introduction-6/" id="article-nav-newer" class="article-nav-link-wrap">
       <strong class="article-nav-caption">Newer</strong>
       <div class="article-nav-title">
         
-          記事の削除の仕方
+          GitHubPagesを公開する
         
       </div>
     </a>
   
+  
+    <a href="/hexo/2020/11/13/introduction-1/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">GitHubでリポジトリを作成する</div>
+    </a>
   
 </nav>
 
